@@ -281,7 +281,13 @@ bool profile_reset(uint8_t prof_index) {
     memset(prof, 0, sizeof(profile[0]));
     // Default
     prof->global.mode               = profile_gobal_mode[prof_index];
-    prof->global.act_pt             = DEFAULT_ACTUATION_POINT;
+
+    if(prof_index==1) {
+        prof->global.act_pt = DEFAULT_ACTUATION_POINT_SECONDARY;
+    }
+    else {
+        prof->global.act_pt = DEFAULT_ACTUATION_POINT;
+    }
     prof->global.rpd_trig_sen_deact = prof->global.rpd_trig_sen = DEFAULT_RAPID_TRIGGER_SENSITIVITY;
 
     for (uint8_t r = 0; r < MATRIX_ROWS; r++)

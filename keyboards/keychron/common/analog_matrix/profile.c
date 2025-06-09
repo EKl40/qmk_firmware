@@ -65,6 +65,7 @@ enum {
 
 extern uint8_t            profile_gobal_mode[PROFILE_COUNT];
 extern uint16_t           default_profiles[PROFILE_COUNT][MATRIX_ROWS][MATRIX_COLS];
+extern uint16_t           default_actuation[PROFILE_COUNT][MATRIX_ROWS][MATRIX_COLS];
 
 static analog_matrix_profile_t  profile[PROFILE_COUNT];
 static uint8_t                  current_profile_index;
@@ -288,6 +289,7 @@ bool profile_reset(uint8_t prof_index) {
         for (uint8_t c = 0; c < MATRIX_COLS; c++) {
             prof->key_config[r][c].mode     = default_profiles[prof_index][r][c] & 0x3;
             prof->key_config[r][c].adv_mode = (default_profiles[prof_index][r][c] >> 2) & 0x07;
+            prof->key_config[r][c].act_pt   =  default_actuation[prof_index][r][c];
             if (prof->key_config[r][c].adv_mode == AKM_GAMEPAD) {
                 prof->key_config[r][c].js_axis = default_profiles[prof_index][r][c] >> 5;
 

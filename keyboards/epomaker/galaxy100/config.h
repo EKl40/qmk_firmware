@@ -16,6 +16,11 @@
 
 /* Status Indicator Lamp */
 
+#define MD_BT1_NAME                         "Galaxy100-1"
+#define MD_BT2_NAME                         "Galaxy100-2"
+#define MD_BT3_NAME                         "Galaxy100-3"
+#define MD_DONGLE_PRODUCT                   "Galaxy-2.4G  Dongle"
+
 #define HS_RGB_INDEX_CAPS                   47
 #define HS_RGB_INDEX_WIN_LOCK               70
 #define HS_RGB_BLINK_INDEX_VAI              5
@@ -23,8 +28,26 @@
 #define HS_RGB_BLINK_INDEX_SPI              7
 #define HS_RGB_BLINK_INDEX_SPD              26
 
+
+#define HS_RGB_BLINK_INDEX_BT1              49
+#define HS_RGB_BLINK_INDEX_BT2              50
+#define HS_RGB_BLINK_INDEX_BT3              51
+#define HS_RGB_BLINK_INDEX_2G4              52
 #define HS_RGB_BLINK_INDEX_WIN              46
 #define HS_RGB_BLINK_INDEX_MAC              45
+
+
+#define HS_LBACK_COLOR_BT1                  RGB_BLUE 
+#define HS_LBACK_COLOR_BT2                  RGB_GREEN 
+#define HS_LBACK_COLOR_BT3                  RGB_RED
+#define HS_LBACK_COLOR_2G4                  RGB_YELLOW 
+#define HS_LBACK_COLOR_USB                  RGB_RED
+
+#define HS_PAIR_COLOR_BT1                   RGB_BLUE
+#define HS_PAIR_COLOR_BT2                   RGB_GREEN
+#define HS_PAIR_COLOR_BT3                   RGB_RED
+#define HS_PAIR_COLOR_2G4                   RGB_YELLOW
+#define HS_PAIR_COLOR_USB                   RGB_RED
 
 /* UART */
 #define SERIAL_DRIVER                       SD3
@@ -51,6 +74,12 @@
 /* WS2812 */
 #define WS2812_SPI_DRIVER  SPIDM2
 #define WS2812_SPI_DIVISOR 32
+
+#define RGB_MATRIX_BAT_INDEX_MAP {84, 83, 82, 81, 80, 79, 78, 77, 76, 75} 
+#define RGB_MATRIX_BAT_VAL 150
+#define HS_BAT_REQ_LEVEL3_COLOR RGB_MATRIX_BAT_VAL, 0x00, 0x00 
+#define HS_BAT_REQ_LEVEL2_COLOR RGB_MATRIX_BAT_VAL, RGB_MATRIX_BAT_VAL, 0x00
+#define HS_BAT_REQ_LEVEL1_COLOR 0, RGB_MATRIX_BAT_VAL, 0x00 
 
 /* rgb_record */
 #define RGBREC_CHANNEL_NUM 1

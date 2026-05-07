@@ -1,16 +1,16 @@
-# RK852
+# r75_pro
 
-* Keyboard Maintainer: [sdk66](https://github.com/sdk66)
-* Hardware Supported: RK852
-* Hardware Availability: [rk](http://www.rkgaming.com)
+* Keyboard Maintainer: [sdk66 ](https://github.com/sdk66 )
+* Hardware Supported: r75_pro
+* Hardware Availability: [rk](https://www.rk.com/)
 
 Make example for this keyboard (after setting up your build environment):
 
-    make rk/rk852/ansi:default
+    make rk/rk75_pro:default
         
 Flashing example for this keyboard:
 
-    make rk/rk852/ansi:default:flash
+    make rk/rk75_pro:default:flash
 
 To reset the board into bootloader mode, do one of the following:
 
@@ -20,3 +20,4 @@ To reset the board into bootloader mode, do one of the following:
 
 See the [build environment setup](https://docs.qmk.fm/#/getting_started_build_tools) and the [make instructions](https://docs.qmk.fm/#/getting_started_make_guide) for more information. Brand new to QMK? Start with our [Complete Newbs Guide](https://docs.qmk.fm/#/newbs).
 
+- 
